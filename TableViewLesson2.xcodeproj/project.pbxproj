@@ -61,11 +61,11 @@
 				7C72298A216237A600C92EB1 /* AppDelegate.swift */,
 				7C72299C216237E700C92EB1 /* MainViewController.swift */,
 				7C72298C216237A600C92EB1 /* ViewController.swift */,
+				7C72299E21623D7600C92EB1 /* CustomTableViewCell.swift */,
 				7C72298E216237A600C92EB1 /* Main.storyboard */,
 				7C722991216237A700C92EB1 /* Assets.xcassets */,
 				7C722993216237A700C92EB1 /* LaunchScreen.storyboard */,
 				7C722996216237A700C92EB1 /* Info.plist */,
-				7C72299E21623D7600C92EB1 /* CustomTableViewCell.swift */,
 			);
 			path = TableViewLesson2;
 			sourceTree = "<group>";

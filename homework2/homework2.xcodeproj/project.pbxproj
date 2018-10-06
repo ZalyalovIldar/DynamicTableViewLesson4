@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234B60052168BA1A00ACA5E0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B60042168BA1A00ACA5E0 /* News.swift */; };
+		234B60072168BAB300ACA5E0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B60062168BAB300ACA5E0 /* NewsViewController.swift */; };
 		236D62272164E88800E85990 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D62262164E88800E85990 /* TableViewCell.swift */; };
 		236D62292164E92000E85990 /* TableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D62282164E92000E85990 /* TableViewViewController.swift */; };
 		237702E8215B865E002042B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237702E7215B865E002042B0 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234B60042168BA1A00ACA5E0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		234B60062168BAB300ACA5E0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		236D62262164E88800E85990 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		236D62282164E92000E85990 /* TableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewController.swift; sourceTree = "<group>"; };
 		237702E4215B865E002042B0 /* homework2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,13 +69,15 @@
 				237702E7215B865E002042B0 /* AppDelegate.swift */,
 				237702E9215B865E002042B0 /* ViewController.swift */,
 				237702FB215BA3E9002042B0 /* User.swift */,
+				237702F9215B9053002042B0 /* DetailViewController.swift */,
 				237702EB215B865E002042B0 /* Main.storyboard */,
-				236D62282164E92000E85990 /* TableViewViewController.swift */,
 				237702EE215B8662002042B0 /* Assets.xcassets */,
 				237702F0215B8662002042B0 /* LaunchScreen.storyboard */,
 				237702F3215B8662002042B0 /* Info.plist */,
-				237702F9215B9053002042B0 /* DetailViewController.swift */,
 				236D62262164E88800E85990 /* TableViewCell.swift */,
+				236D62282164E92000E85990 /* TableViewViewController.swift */,
+				234B60062168BAB300ACA5E0 /* NewsViewController.swift */,
+				234B60042168BA1A00ACA5E0 /* News.swift */,
 			);
 			path = homework2;
 			sourceTree = "<group>";
@@ -151,8 +157,10 @@
 				237702FC215BA3E9002042B0 /* User.swift in Sources */,
 				237702FA215B9053002042B0 /* DetailViewController.swift in Sources */,
 				237702EA215B865E002042B0 /* ViewController.swift in Sources */,
+				234B60052168BA1A00ACA5E0 /* News.swift in Sources */,
 				236D62292164E92000E85990 /* TableViewViewController.swift in Sources */,
 				237702E8215B865E002042B0 /* AppDelegate.swift in Sources */,
+				234B60072168BAB300ACA5E0 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

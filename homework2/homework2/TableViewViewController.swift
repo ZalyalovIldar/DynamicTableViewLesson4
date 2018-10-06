@@ -10,12 +10,15 @@ import UIKit
 
 class TableViewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var news: News!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 300
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,15 +27,25 @@ class TableViewViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
+        
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            
+            if let destinationVC = segue.destination as? NewsViewController {
+                destinationVC.news = news
+            }
+        }
+    }
+    
 
 }

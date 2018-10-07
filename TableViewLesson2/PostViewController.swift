@@ -20,5 +20,4 @@ class PostViewController: UIViewController {
         ivPostImage.image = post.postImage
         tvPostText.text = post.postText
     }
-
 }

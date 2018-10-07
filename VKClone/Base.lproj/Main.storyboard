@@ -123,7 +123,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="accountStatusLabel" destination="mzW-cz-6cd" id="HQg-H6-v5T"/>
-                        <outlet property="avatarImage" destination="e5S-SA-XqF" id="F01-BH-E4z"/>
+                        <outlet property="avatarImageView" destination="e5S-SA-XqF" id="VVb-OL-YM3"/>
                         <outlet property="detailInfoButton" destination="SEH-Ty-L89" id="m5n-6P-zc3"/>
                         <outlet property="editButton" destination="Ctt-px-LIc" id="rWg-ni-gxK"/>
                         <outlet property="userAgeAndCityLabel" destination="cWx-Pr-bsP" id="rlb-2Q-8Cf"/>
@@ -456,7 +456,7 @@
                         <outlet property="accountStatusLabel" destination="lhr-JR-vLb" id="sQV-mn-cLh"/>
                         <outlet property="activitiesLabel" destination="cJv-61-QQV" id="Pww-n9-HFr"/>
                         <outlet property="ageLabel" destination="qXY-gd-D0l" id="6Wu-Ua-UXv"/>
-                        <outlet property="avatarImage" destination="Gq3-6M-7gu" id="nGF-W3-b7Z"/>
+                        <outlet property="avatarImageView" destination="Gq3-6M-7gu" id="tbu-rv-PFr"/>
                         <outlet property="birthdayLabel" destination="Zts-eD-n8I" id="b92-1W-kZI"/>
                         <outlet property="cityLabel" destination="sYj-Yt-J03" id="bAN-xN-o2s"/>
                         <outlet property="facebookLabel" destination="fx8-1m-mCR" id="6D6-WT-FhU"/>
@@ -635,12 +635,12 @@
                                         <connections>
                                             <outlet property="commentButton" destination="GbU-OP-awp" id="Sx7-5j-AOI"/>
                                             <outlet property="commentsCountLabel" destination="QZg-gY-7DE" id="GJK-sX-stm"/>
-                                            <outlet property="groupAvatarImage" destination="uxL-ob-DG4" id="B8i-Ed-wIF"/>
+                                            <outlet property="groupAvatarImageView" destination="uxL-ob-DG4" id="F1K-74-L5e"/>
                                             <outlet property="groupNameLabel" destination="yam-63-HAi" id="6QS-a7-bKF"/>
                                             <outlet property="likeButton" destination="I4S-bw-QaO" id="gXr-F7-ME9"/>
                                             <outlet property="likeCountLabel" destination="wzs-EZ-5Ed" id="aVY-fC-WvT"/>
                                             <outlet property="postDateLabel" destination="E98-EU-eXu" id="EBf-VF-xC3"/>
-                                            <outlet property="postImage" destination="5Pj-1y-VH8" id="9Ap-Yy-h5q"/>
+                                            <outlet property="postImageView" destination="5Pj-1y-VH8" id="aK5-Dy-5k0"/>
                                             <outlet property="postTextLabel" destination="AEE-hf-4UA" id="nav-Ah-fyg"/>
                                             <outlet property="shareButton" destination="j6e-kF-vMq" id="ZjJ-mo-MUW"/>
                                             <outlet property="viewsCountLabel" destination="Wh3-G2-feu" id="uzh-wD-4AL"/>
@@ -852,12 +852,12 @@
                     <connections>
                         <outlet property="commentButton" destination="92g-Ps-0Oe" id="P9a-vX-0Re"/>
                         <outlet property="commentsCountLabel" destination="Bst-c2-Uj6" id="AaV-MC-ADv"/>
-                        <outlet property="groupAvatarImage" destination="gHk-L7-lM6" id="fyw-b8-Nzh"/>
+                        <outlet property="groupAvatarImageView" destination="gHk-L7-lM6" id="0U2-4B-1SV"/>
                         <outlet property="groupNameLabel" destination="0Vu-Ww-9Df" id="w8l-of-gfu"/>
                         <outlet property="likeButton" destination="jBG-Df-cLw" id="Npc-hF-kYa"/>
                         <outlet property="likesCountLabel" destination="odf-VM-9P5" id="j8s-Qg-lR7"/>
                         <outlet property="postDateLabel" destination="FbW-NK-9VZ" id="vOF-eD-KGR"/>
-                        <outlet property="postImage" destination="Ay8-ha-TmI" id="VnF-9g-Q8y"/>
+                        <outlet property="postImageView" destination="Ay8-ha-TmI" id="qF9-Gw-Q92"/>
                         <outlet property="postTextLabel" destination="PvS-do-ThP" id="ox4-Bj-Ttg"/>
                         <outlet property="shareButton" destination="vKa-Jm-hIG" id="NFX-iJ-kyC"/>
                         <outlet property="viewsCountLabel" destination="4oR-RV-agI" id="XKS-fd-Xmc"/>

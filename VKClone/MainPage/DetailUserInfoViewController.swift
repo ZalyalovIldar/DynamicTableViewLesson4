@@ -12,7 +12,7 @@ class DetailUserInfoViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameSurnameLabel: UILabel!
     @IBOutlet weak var accountStatusLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -48,14 +48,14 @@ class DetailUserInfoViewController: UIViewController, UITextFieldDelegate {
     /// Applies styles to view objects
     func applyStyles() {
         
-        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
-        avatarImage.clipsToBounds = true
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
+        avatarImageView.clipsToBounds = true
     }
     
     /// Set values in view's fields
     func setFieldValues() {
         
-        avatarImage.image = UIImage(named: currentUser.avatar)!
+        avatarImageView.image = UIImage(named: currentUser.avatar)!
         userNameSurnameLabel.text = "\(currentUser?.name ?? "") \(currentUser?.surname ?? "")"
         accountStatusLabel.text = currentUser?.pageStatus
         ageLabel.text = "\(currentUser?.age ?? 0) лет"

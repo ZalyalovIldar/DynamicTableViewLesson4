@@ -11,7 +11,7 @@ import UIKit
 
 class UserPageViewController: UIViewController {
     
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameSurnameLabel: UILabel!
     @IBOutlet weak var accountStatusLabel: UILabel!
     @IBOutlet weak var userAgeAndCityLabel: UILabel!
@@ -38,11 +38,11 @@ class UserPageViewController: UIViewController {
     /// Applies styles to view objects
     func applyStyles() {
         
-        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
-        avatarImage.clipsToBounds = true
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
+        avatarImageView.clipsToBounds = true
         editButton.layer.cornerRadius = CGFloat(cornerRadius)
         
-        avatarImage.image = UIImage(named: user!.avatar)!
+        avatarImageView.image = UIImage(named: user!.avatar)!
         userNameSurnameLabel.text = "\(user?.name ?? "") \(user?.surname ?? "")"
         accountStatusLabel.text = user?.pageStatus
         userAgeAndCityLabel.text = "\(user?.age ?? 0) лет, \(user?.city ?? moscowCity)"

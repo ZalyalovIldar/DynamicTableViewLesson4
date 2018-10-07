@@ -10,11 +10,11 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var groupAvatarImage: UIImageView!
+    @IBOutlet weak var groupAvatarImageView: UIImageView!
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
-    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
     
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeCountLabel: UILabel!
@@ -56,11 +56,11 @@ class PostTableViewCell: UITableViewCell {
         
         parentViewController = parentVC
         
-        groupAvatarImage.image = UIImage(named: post.groupAvatar)
+        groupAvatarImageView.image = UIImage(named: post.groupAvatar)
         groupNameLabel.text = post.groupName
         postDateLabel.text = post.postDate
         postTextLabel.text = post.postText
-        postImage.image = UIImage(named: post.postImageLink)
+        postImageView.image = UIImage(named: post.postImageLink)
         likeCountLabel.text = String(post.likesCount)
         commentsCountLabel.text = String(post.commentsCount)
         viewsCountLabel.text = String(post.viewsCount)
@@ -71,8 +71,8 @@ class PostTableViewCell: UITableViewCell {
     /// Applies styles to view objects
     func applyStyles() {
         
-        groupAvatarImage.layer.cornerRadius = groupAvatarImage.frame.width / 2
-        groupAvatarImage.clipsToBounds = true
+        groupAvatarImageView.layer.cornerRadius = groupAvatarImageView.frame.width / 2
+        groupAvatarImageView.clipsToBounds = true
     }
 
 }

@@ -1,0 +1,69 @@
+
+//
+//  UserPageViewController.swift
+//  VKClone
+//
+//  Created by Петр on 04/10/2018.
+//  Copyright © 2018 DreamTeam. All rights reserved.
+//
+
+import UIKit
+
+class UserPageViewController: UIViewController {
+    
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var userNameSurnameLabel: UILabel!
+    @IBOutlet weak var accountStatusLabel: UILabel!
+    @IBOutlet weak var userAgeAndCityLabel: UILabel!
+    
+    @IBOutlet weak var detailInfoButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
+    
+    var user: User!
+    
+    let detailInfoSegueID = "detailUserInfo"
+    let moscowCity = "Москва"
+    let cornerRadius = 10
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        user = getRandomUser()
+        applyStyles()
+    }
+    
+    //MARK: - View's styles
+    
+    /// Applies styles to view objects
+    func applyStyles() {
+        
+        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
+        avatarImage.clipsToBounds = true
+        editButton.layer.cornerRadius = CGFloat(cornerRadius)
+        
+        avatarImage.image = UIImage(named: user!.avatar)!
+        userNameSurnameLabel.text = "\(user?.name ?? "") \(user?.surname ?? "")"
+        accountStatusLabel.text = user?.pageStatus
+        userAgeAndCityLabel.text = "\(user?.age ?? 0) лет, \(user?.city ?? moscowCity)"
+    }
+    
+    
+    //MARK: - Navigation
+    
+    /// Throws current user to DetailUserInfoViewController
+    ///
+    /// - Parameters:
+    ///   - segue: future seque
+    ///   - sender: sender
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == detailInfoSegueID {
+            
+            if let destinationVC = segue.destination as? DetailUserInfoViewController {
+                destinationVC.currentUser = user
+            }
+        }
+    }
+
+}

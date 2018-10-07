@@ -16,12 +16,15 @@ struct Post {
     var postText: String
 }
 
+//MARK: - working with table
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     /// Идентификатор ячейки
     fileprivate let cellIdentifier = "cell"
+    
+    /// массив постов
     var postsArray = [Post]()
     
     override func viewDidLoad() {
@@ -41,7 +44,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv6"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
         postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv3"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
         
-        tableView.estimatedRowHeight = 100
+        /// Делаем размер ячейки динамичным
+        tableView.estimatedRowHeight = 400
+        /// Добавляю рефрешер в таблице
         tableView.addSubview(refreshControl)
     }
     
@@ -57,7 +62,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
     // MARK: - Refreshing
     /// обаботчик свайпа таблицы
     lazy var refreshControl: UIRefreshControl = {
@@ -70,7 +74,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return refreshControl
     }()
     
-    
     /// метод вызывающийся при свайпе таблицы
     ///
     /// - Parameter refreshControl: UIRefreshControl
@@ -79,7 +82,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         showToast(message: "Обновлено!")
         refreshControl.endRefreshing()
     }
-    
     
     /// Отображение сообщения
     ///
@@ -130,6 +132,5 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             destinationController.post = post
         }
     }
-
 }
 

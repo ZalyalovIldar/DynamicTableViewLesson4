@@ -26,6 +26,9 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    /// Метод вызывающийся при создания ячейки для её заполнения
+    ///
+    /// - Parameter post: объект класса Post из коллекции
     func configureCell(post: Post) {
         ivAvatar.image = post.authorAvatar
         tvDate.text = post.postDate
@@ -34,6 +37,5 @@ class CustomTableViewCell: UITableViewCell {
         ivPostImage.image = post.postImage
         
         tvPostText.translatesAutoresizingMaskIntoConstraints = false
-        
     }
 }

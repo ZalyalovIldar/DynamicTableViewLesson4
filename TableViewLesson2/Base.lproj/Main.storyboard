@@ -163,6 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xhP-Aa-Gsu"/>
                     <connections>
+                        <outlet property="View" destination="oHf-Us-Vid" id="XXf-uE-wRb"/>
                         <outlet property="tableView" destination="Vnn-bd-JLA" id="OZj-pi-Nqn"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="detailSegue" id="Wx0-pS-idS"/>
                     </connections>

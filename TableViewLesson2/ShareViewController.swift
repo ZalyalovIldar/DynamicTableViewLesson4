@@ -21,6 +21,9 @@ class ShareViewController: UIViewController {
         tvSharedText.text = post.postText
         ///сохранение текста в буфер обмена
         UIPasteboard.general.string = post.postText
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         ///выводим на экран сообщение о сохранении
         showToast(message: "saved to clipboard")
     }
@@ -31,7 +34,7 @@ class ShareViewController: UIViewController {
     func showToast(message : String) {
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.black
+        toastLabel.textColor = UIColor.white
         toastLabel.textAlignment = .center;
         toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
         toastLabel.text = message

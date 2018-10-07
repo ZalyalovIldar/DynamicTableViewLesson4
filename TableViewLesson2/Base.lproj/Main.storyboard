@@ -61,7 +61,7 @@
                                                         <constraint firstAttribute="width" constant="46" id="Cho-mk-toG"/>
                                                         <constraint firstAttribute="height" constant="42" id="KSK-Zf-oNC"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="likes"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf6-0p-nxz">
                                                     <rect key="frame" x="71" y="490" width="12.5" height="42"/>
@@ -89,7 +89,8 @@
                                                         <constraint firstAttribute="height" constant="42" id="Bih-dB-WSi"/>
                                                         <constraint firstAttribute="width" constant="46" id="hZS-Gg-LYO"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="comments"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-DH-icL">
                                                     <rect key="frame" x="204" y="490" width="46" height="42"/>
@@ -97,7 +98,7 @@
                                                         <constraint firstAttribute="width" constant="46" id="NOB-BM-wXl"/>
                                                         <constraint firstAttribute="height" constant="42" id="SrQ-oE-SbE"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
+                                                    <state key="normal" title="share"/>
                                                     <connections>
                                                         <action selector="openSharingScreen:" destination="irK-Vl-Pqk" eventType="touchUpInside" id="T6j-WF-rho"/>
                                                     </connections>

@@ -103,13 +103,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK: - Navigation
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailSegue", sender: postsArray[indexPath.row])
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        if segue.identifier == "detailSegue", let model = sender as? SomeObject {
-//
-//            let destinationController = segue.destination as! ViewController
-//            destinationController.model = model
-//        }
+        if segue.identifier == "detailSegue", let post = sender as? Post {
+
+            let destinationController = segue.destination as! PostViewController
+            destinationController.post = post
+        }
     }
     
     //MARK: - CustomCellDelegate

@@ -98,6 +98,9 @@
                                                         <constraint firstAttribute="height" constant="42" id="SrQ-oE-SbE"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="openSharingScreen:" destination="irK-Vl-Pqk" eventType="touchUpInside" id="T6j-WF-rho"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="Thinking_Face_Emoji_large" translatesAutoresizingMaskIntoConstraints="NO" id="NcL-WY-yWr">
                                                     <rect key="frame" x="15" y="158" width="343" height="316"/>
@@ -162,6 +165,7 @@
                         <outlet property="View" destination="oHf-Us-Vid" id="XXf-uE-wRb"/>
                         <outlet property="tableView" destination="Vnn-bd-JLA" id="OZj-pi-Nqn"/>
                         <segue destination="cjS-u1-B33" kind="show" identifier="detailSegue" id="gmX-Ov-HTR"/>
+                        <segue destination="p3a-A7-Bot" kind="show" identifier="shareSegue" id="Qa8-Db-xxW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KT-mz-ysr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,7 +211,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QO3-il-Hmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272.8000000000002" y="181.25937031484258"/>
+            <point key="canvasLocation" x="2298" y="-23"/>
+        </scene>
+        <!--Share View Controller-->
+        <scene sceneID="ION-5U-CUC">
+            <objects>
+                <viewController id="p3a-A7-Bot" customClass="ShareViewController" customModule="TableViewLesson2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUB-Ul-U4t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmF-yO-KoG">
+                                <rect key="frame" x="8" y="76" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i4c-Pk-BrO" firstAttribute="trailing" secondItem="PmF-yO-KoG" secondAttribute="trailing" constant="8" id="LS9-R6-ulR"/>
+                            <constraint firstItem="PmF-yO-KoG" firstAttribute="leading" secondItem="i4c-Pk-BrO" secondAttribute="leading" constant="8" id="QNy-4v-hGo"/>
+                            <constraint firstItem="PmF-yO-KoG" firstAttribute="top" secondItem="i4c-Pk-BrO" secondAttribute="top" constant="12" id="Qej-re-ZKg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i4c-Pk-BrO"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvSharedText" destination="PmF-yO-KoG" id="Z8z-on-aV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TD7-c7-Z9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="665"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zlN-L9-R2J">

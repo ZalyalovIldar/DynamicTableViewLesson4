@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! CustomTableViewCell
-        cell.configureCell(post: postsArray[indexPath.row])
+        cell.configureCell(post: postsArray[indexPath.row],index: indexPath.row, delegate: self)
         
         return cell
     }
@@ -103,22 +103,33 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK: - Navigation
+    /// обработчик нажатия на элемент таблицы
+    ///
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "detailSegue", sender: postsArray[indexPath.row])
     }
     
+    /// Обработка нажатия на шэринг кнопку
+    ///
+    /// - Parameter index: индекс элемента
+    func didPressInfoButton(index: Int) {
+          performSegue(withIdentifier: "shareSegue", sender: postsArray[index])
+    }
+    
+    /// подктовка объектов класса для отправки
+    ///
+    /// - Parameters:
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailSegue", let post = sender as? Post {
-
             let destinationController = segue.destination as! PostViewController
             destinationController.post = post
         }
+        
+        if segue.identifier == "shareSegue", let post = sender as? Post {
+            let destinationController = segue.destination as! ShareViewController
+            destinationController.post = post
+        }
     }
-    
-    //MARK: - CustomCellDelegate
-    
-    func didPressInfoButton() {
 
-    }
 }
 

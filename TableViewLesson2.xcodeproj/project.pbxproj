@@ -14,6 +14,7 @@
 		7C72299D216237E700C92EB1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72299C216237E700C92EB1 /* MainViewController.swift */; };
 		7C72299F21623D7600C92EB1 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72299E21623D7600C92EB1 /* CustomTableViewCell.swift */; };
 		CE47281F216A672F0006468F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47281E216A672F0006468F /* PostViewController.swift */; };
+		CE472821216A6BF10006468F /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE472820216A6BF10006468F /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7C72299C216237E700C92EB1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7C72299E21623D7600C92EB1 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE47281E216A672F0006468F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		CE472820216A6BF10006468F /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				7C72298A216237A600C92EB1 /* AppDelegate.swift */,
+				CE472820216A6BF10006468F /* ShareViewController.swift */,
 				7C72299C216237E700C92EB1 /* MainViewController.swift */,
+				CE472822216A6CE60006468F /* New Group */,
 				7C72298E216237A600C92EB1 /* Main.storyboard */,
 				CE47281E216A672F0006468F /* PostViewController.swift */,
 				7C722991216237A700C92EB1 /* Assets.xcassets */,
@@ -68,6 +72,13 @@
 				7C72299E21623D7600C92EB1 /* CustomTableViewCell.swift */,
 			);
 			path = TableViewLesson2;
+			sourceTree = "<group>";
+		};
+		CE472822216A6CE60006468F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				CE47281F216A672F0006468F /* PostViewController.swift in Sources */,
 				7C72299D216237E700C92EB1 /* MainViewController.swift in Sources */,
+				CE472821216A6BF10006468F /* ShareViewController.swift in Sources */,
 				7C72299F21623D7600C92EB1 /* CustomTableViewCell.swift in Sources */,
 				7C72298B216237A600C92EB1 /* AppDelegate.swift in Sources */,
 			);

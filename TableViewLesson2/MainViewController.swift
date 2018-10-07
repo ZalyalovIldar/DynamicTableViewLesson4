@@ -8,9 +8,12 @@
 
 import UIKit
 
-struct SomeObject {
-    var image: UIImage
-    var text: String
+struct Post {
+    var authorAvatar: UIImage
+    var postImage: UIImage
+    var authorName: String
+    var postDate: String
+    var postText: String
 }
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate {
@@ -20,38 +23,37 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     /// Идентификатор ячейки
     fileprivate let cellIdentifier = "cell"
+    var postsArray = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv2"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: "Although these classes actually can support the display of arbitrary amounts of text, labels and text fields are intended to be used for relatively small amounts of text, typically a single line. Text views, on the other hand, are meant to display large amounts of text."))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv3"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: "Use Text Objects to Display Text Content"))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv4"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: "Although these classes actually can support the display of arbitrary amounts of text, labels and text fields are intended to be used for relatively small amounts of text, typically a single line. Text views, on the other hand, are meant to display large amounts of text.Text view objects, created from the UITextView class, display text formatted into paragraphs, columns, and pages, with all the characteristics of fine typesetting, such as kerning, ligatures, sophisticated line-breaking, and justification. These typographic services are supplied to UITextView through an underlying technology called Text Kit, a powerful layout engine that is both easy to use and extensible. See Using Text Kit to Draw and Manage Text for more information about Text Kit.Figure 1-1 shows examples of the primary text objects as they appear on screen. The image on the left shows several different styles of text fields while the image on the right shows a single text view. The callouts displayed on the background are UILabel objects embedded inside the table cells used to display the different views. (These examples were taken from the UIKit Catalog (iOS): Creating and Customizing UIKit Controls sample app, which demonstrates many of the views and controls available in UIKit.)"))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv5"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: "Use Web Views to Display Web Content"))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv5"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv6"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv3"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv1"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv4"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv6"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv6"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        postsArray.append(Post(authorAvatar: #imageLiteral(resourceName: "iv1"), postImage: #imageLiteral(resourceName: "iv3"), authorName: "Timur Badretdinov", postDate: "02.04.1998", postText: ""))
+        
         tableView.estimatedRowHeight = 100
     }
 
-    //MARK: - UITableView delegate&datasource
-    
-    /// Description descrition
-    ///
-    /// - Parameters:
-    ///   - a: some param
-    ///   - b: second param
-    /// - Returns: non null value
-    func calculate(a: Int, and b: Int) -> Int {
-        return 0
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return postsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! CustomTableViewCell
-        
-        cell.configureCell(with: #imageLiteral(resourceName: "Thinking_Face_Emoji_large"), nameString: "SomeName", delegate: self)
-        
-        if indexPath.row % 2 == 0 {
-            cell.configureCell(with: #imageLiteral(resourceName: "Thinking_Face_Emoji_large"), nameString: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.", delegate: self)
-        }
+        cell.configureCell(post: postsArray[indexPath.row])
         
         return cell
     }
@@ -60,20 +62,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "detailSegue", let model = sender as? SomeObject {
-            
-            let destinationController = segue.destination as! ViewController
-            destinationController.model = model
-        }
+//        if segue.identifier == "detailSegue", let model = sender as? SomeObject {
+//
+//            let destinationController = segue.destination as! ViewController
+//            destinationController.model = model
+//        }
     }
     
     //MARK: - CustomCellDelegate
     
     func didPressInfoButton() {
-        
-        let model = SomeObject(image: #imageLiteral(resourceName: "Thinking_Face_Emoji_large"), text: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.")
-        
-        performSegue(withIdentifier: "detailSegue", sender: model)
+
     }
 }
 

@@ -14,24 +14,26 @@ protocol CustomCellDelegate: class {
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var someImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ivAvatar: UIImageView!
+    @IBOutlet weak var tvDate: UILabel!
+    @IBOutlet weak var tvName: UILabel!
+    @IBOutlet weak var tvPostText: UILabel!
+    @IBOutlet weak var ivPostImage: UIImageView!
     
     weak var delegate: CustomCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
-    func configureCell(with image: UIImage, nameString: String, delegate: CustomCellDelegate) {
+    func configureCell(post: Post) {
+        ivAvatar.image = post.authorAvatar
+        tvDate.text = post.postDate
+        tvName.text = post.authorName
+        tvPostText.text = post.postText
+        ivPostImage.image = post.postImage
         
-        someImageView.image = image
-        nameLabel.text = nameString
-        self.delegate = delegate
-    }
-
-    @IBAction func infoButtonPressed(_ sender: Any) {
-        delegate?.didPressInfoButton()
+        tvPostText.translatesAutoresizingMaskIntoConstraints = false
+        
     }
 }

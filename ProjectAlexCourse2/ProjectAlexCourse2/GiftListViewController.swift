@@ -11,7 +11,7 @@ import UIKit
 class GiftListViewController: UIViewController {
 
    
-    
+    // MARK:  пременные
     @IBOutlet var fullBlockView: UIView!
     @IBOutlet weak var scrollBlockScrollView: UIScrollView!
     @IBOutlet weak var firstPodBlockView: UIView!

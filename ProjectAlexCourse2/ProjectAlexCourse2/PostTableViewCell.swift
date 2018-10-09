@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import SpriteKit
 protocol CustomCellDelegate: class {
     func didpressbutton()
+    func share()
 }
 
 class PostTableViewCell: UITableViewCell {
-
+    
+    // MARK: переменные
     @IBOutlet weak var postAvatar: UIImageView!
     @IBOutlet weak var postMainPhoto: UIImageView!
     @IBOutlet weak var postName: UILabel!
@@ -24,9 +27,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postCommentCount: UILabel!
     @IBOutlet weak var postShareCount: UILabel!
     
+    
+    // MARK: действия кнопок
     /// метод поставить и убрать лайк
-    ///
-    /// - Parameter sender: <#sender description#>
+    
     @IBAction func likedPressed(_ sender: Any) {
         if postLikeCount.text == String(0){
             postLikeCount.text = String(1)}
@@ -37,20 +41,16 @@ class PostTableViewCell: UITableViewCell {
   
     
     /// метод зашерить инфу
-    ///
-    /// - Parameter sender: <#sender description#>
-    @IBAction func sharedPressed(_ sender: Any) {
-        if postShareCount.text == String(0){
-            postShareCount.text = String(1)}
-        else {
-            postShareCount.text = String(0)
-        }
+    
+    @IBAction func sharePressed() {
+      delegate?.share()
+    
     }
     @IBAction func postOpenButton(_ sender: Any) {
         delegate?.didpressbutton()
     }
     weak var delegate: CustomCellDelegate?
-   
+   // MARK:  настройка ячейки
     func configurecell(with avaimage: UIImage, name: String, time: String, mainPhoto: UIImage, likeimage: UIImage, commentImage: UIImage, shareimage: UIImage, likeCount: Int, commentCount: Int, shareCount: Int, delegate: CustomCellDelegate){
         postAvatar.image = avaimage
         postMainPhoto.image = mainPhoto

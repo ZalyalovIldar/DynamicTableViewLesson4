@@ -10,6 +10,9 @@ import UIKit
 
 class InfoPostViewController: UIViewController {
 
+    
+    
+
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var image: UIImageView!
     var model: Post!

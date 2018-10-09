@@ -8,14 +8,19 @@
 
 import UIKit
 
-// MARK: - метод генерации случайных числе
+
+
 public extension ExpressibleByIntegerLiteral {
+    /// метод генерации лучайных чисел
+    ///
+    /// - Returns: <#return value description#>
     public static func arc3random() -> Self {
         var r: Self = 0
         arc4random_buf(&r, MemoryLayout<Self>.size)
         return r
     }
 }
+// MARK: данные
 let selfNameLabelArray = ["Gleb Glebov", "Ivan Ivanov", "Tom Tompson"]
 let birthdayLabelArray = ["14 September 1990", "4 March 2000", "23 February 1988"]
 let studiLabelArray = ["Kazan Federal University", "Moscow State University", "Oxford University"]
@@ -23,6 +28,7 @@ let instNameLabelArray = ["alxarsnk", "1233", "krut_official"]
 
 class ThirdViewController: UIViewController, UITextFieldDelegate {
   
+    // MARK:  переменные
     @IBOutlet weak var scrollBlockScrollView: UIScrollView!
     @IBOutlet var fullBlockView: UIView!
     @IBOutlet weak var mainInformblockView: UIView!
@@ -89,7 +95,8 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     let randomBirth = arc4random_uniform(UInt32(birthdayLabelArray.count))
     let randomUniversity = arc4random_uniform(UInt32(studiLabelArray.count))
     let randomInstaName = arc4random_uniform(UInt32(instNameLabelArray.count))
-    
+    // MARK:  вид
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         statusTextField.delegate = self

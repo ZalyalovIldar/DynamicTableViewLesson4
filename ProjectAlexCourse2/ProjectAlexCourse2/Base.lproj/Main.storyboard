@@ -703,7 +703,7 @@
                                                     </constraints>
                                                     <state key="normal" title=" "/>
                                                     <connections>
-                                                        <action selector="sharedPressed:" destination="PV8-mS-oaN" eventType="touchUpInside" id="5SH-rn-MBs"/>
+                                                        <action selector="sharePressed" destination="PV8-mS-oaN" eventType="touchUpInside" id="Zgq-Zd-ogo"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE1-cB-IC1">
@@ -712,9 +712,6 @@
                                                         <constraint firstAttribute="width" constant="34" id="c1w-te-RZQ"/>
                                                     </constraints>
                                                     <state key="normal" title=" "/>
-                                                    <connections>
-                                                        <action selector="commentPressed:" destination="PV8-mS-oaN" eventType="touchUpInside" id="lps-SY-mpC"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-Op-FlL">
                                                     <rect key="frame" x="20" y="335" width="34" height="30"/>
@@ -896,8 +893,8 @@
                                 <rect key="frame" x="20" y="155" width="374" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSP-Rw-9fH">
-                                <rect key="frame" x="20" y="496" width="374" height="201"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSP-Rw-9fH">
+                                <rect key="frame" x="20" y="458" width="374" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1204,6 +1201,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e9I-hL-1Jq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="voZ-fO-kmv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

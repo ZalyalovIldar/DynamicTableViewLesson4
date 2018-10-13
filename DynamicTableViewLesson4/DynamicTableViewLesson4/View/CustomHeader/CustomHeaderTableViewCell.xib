@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="498" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="DynamicTableViewLesson4" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="498"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="398" height="497.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftTwo" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-mh-6DJ">
+                        <rect key="frame" x="16" y="16" width="77" height="77"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="77" id="BEi-rs-HgK"/>
+                            <constraint firstAttribute="height" constant="77" id="JGD-ns-15s"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorn Anvil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upG-6Q-ST3">
+                        <rect key="frame" x="118" y="16" width="203" height="20"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBh-Ex-O1o">
+                        <rect key="frame" x="118" y="43" width="203" height="21"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 года" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-3O-NkH">
+                        <rect key="frame" x="118" y="72" width="203" height="21"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US7-x3-LQw">
+                        <rect key="frame" x="356" y="46" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="VFd-cH-eWz"/>
+                            <constraint firstAttribute="width" constant="22" id="YfX-hF-SlJ"/>
+                        </constraints>
+                        <color key="tintColor" red="0.31708803772926331" green="0.50140523910522461" blue="0.72296887636184692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="infoButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MfZ-99-zCp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq2-u5-1VV">
+                        <rect key="frame" x="16" y="107" width="366" height="33"/>
+                        <color key="backgroundColor" red="0.9259839653968811" green="0.93016594648361206" blue="0.94344526529312134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="366" id="P9q-8u-SpP"/>
+                            <constraint firstAttribute="height" constant="33" id="e0F-G0-Bv8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                        <state key="normal" title="Редактировать">
+                            <color key="titleColor" red="0.31708803772926331" green="0.50140523910522461" blue="0.72296887636184692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3hk-oy-XSM">
+                        <rect key="frame" x="6" y="147" width="387" height="68"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="68" id="237-Ed-35s"/>
+                            <constraint firstAttribute="width" constant="387" id="rdT-va-Iz4"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y1p-dS-irO">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="uLS-km-U3s"/>
+                            <outlet property="delegate" destination="-1" id="IEF-6y-5RJ"/>
+                        </connections>
+                    </collectionView>
+                    <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FnT-6U-w0n">
+                        <rect key="frame" x="0.0" y="336" width="398" height="10"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-fH-TBF">
+                        <rect key="frame" x="0.0" y="217" width="398" height="0.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view alpha="0.30000001192092896" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1W-fc-00c">
+                        <rect key="frame" x="0.0" y="396" width="398" height="10"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftTwo" translatesAutoresizingMaskIntoConstraints="NO" id="JAH-KS-W5R">
+                        <rect key="frame" x="16" y="355" width="33" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Что у Вас нового?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaY-Cy-nKl">
+                        <rect key="frame" x="63" y="361" width="132" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bz-d4-fkt">
+                        <rect key="frame" x="10" y="414" width="105" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.8820914626121521" green="0.88352376222610474" blue="0.9001125693321228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <state key="normal" title="Все записи">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFF-3W-aTG">
+                        <rect key="frame" x="123" y="414" width="105" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <state key="normal" title="Мои записи">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons" translatesAutoresizingMaskIntoConstraints="NO" id="B1a-KS-nsz">
+                        <rect key="frame" x="294" y="354" width="70" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dSF-rU-1cl">
+                        <rect key="frame" x="6" y="225" width="387" height="85"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jpm-90-Nc5">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="US7-x3-LQw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="46" id="2kb-WF-32b"/>
+                    <constraint firstItem="PBh-Ex-O1o" firstAttribute="leading" secondItem="upG-6Q-ST3" secondAttribute="leading" id="4O1-mK-SBJ"/>
+                    <constraint firstAttribute="trailing" secondItem="US7-x3-LQw" secondAttribute="trailing" constant="20" id="8pd-BR-rWx"/>
+                    <constraint firstItem="tJG-3O-NkH" firstAttribute="trailing" secondItem="PBh-Ex-O1o" secondAttribute="trailing" id="Arr-fb-v2P"/>
+                    <constraint firstItem="oEE-mh-6DJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="FWv-9E-drl"/>
+                    <constraint firstItem="PBh-Ex-O1o" firstAttribute="trailing" secondItem="upG-6Q-ST3" secondAttribute="trailing" id="IxS-rF-x1C"/>
+                    <constraint firstItem="oEE-mh-6DJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JcN-4i-MFR"/>
+                    <constraint firstItem="US7-x3-LQw" firstAttribute="leading" secondItem="upG-6Q-ST3" secondAttribute="trailing" constant="35" id="KPI-VA-i4U"/>
+                    <constraint firstItem="Uq2-u5-1VV" firstAttribute="top" secondItem="tJG-3O-NkH" secondAttribute="bottom" constant="14" id="N5P-Pz-C8j"/>
+                    <constraint firstAttribute="trailing" secondItem="3hk-oy-XSM" secondAttribute="trailing" constant="5" id="SPP-3w-qQ9"/>
+                    <constraint firstItem="3hk-oy-XSM" firstAttribute="top" secondItem="Uq2-u5-1VV" secondAttribute="bottom" constant="7" id="Vn8-HC-bP7"/>
+                    <constraint firstItem="tJG-3O-NkH" firstAttribute="top" secondItem="PBh-Ex-O1o" secondAttribute="bottom" constant="8" id="eTz-0O-2gS"/>
+                    <constraint firstItem="upG-6Q-ST3" firstAttribute="leading" secondItem="oEE-mh-6DJ" secondAttribute="trailing" constant="25" id="fOy-2x-A16"/>
+                    <constraint firstItem="upG-6Q-ST3" firstAttribute="top" secondItem="oEE-mh-6DJ" secondAttribute="top" id="h55-q7-Xrd"/>
+                    <constraint firstAttribute="trailing" secondItem="Uq2-u5-1VV" secondAttribute="trailing" constant="16" id="ltE-yk-dl5"/>
+                    <constraint firstItem="PBh-Ex-O1o" firstAttribute="top" secondItem="upG-6Q-ST3" secondAttribute="bottom" constant="7" id="qMj-3X-Fbe"/>
+                    <constraint firstItem="Uq2-u5-1VV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="t5H-l1-mce"/>
+                    <constraint firstItem="tJG-3O-NkH" firstAttribute="leading" secondItem="PBh-Ex-O1o" secondAttribute="leading" id="wWc-Kc-OzF"/>
+                    <constraint firstItem="3hk-oy-XSM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="zOP-He-riy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="allFeedButton" destination="0Bz-d4-fkt" id="uVn-ya-nQ3"/>
+                <outlet property="avatarImageView" destination="oEE-mh-6DJ" id="gmD-2N-nVm"/>
+                <outlet property="avatarSmallImageView" destination="JAH-KS-W5R" id="GoH-9n-aNu"/>
+                <outlet property="collectionView" destination="3hk-oy-XSM" id="w7E-UK-a1O"/>
+                <outlet property="editButton" destination="Uq2-u5-1VV" id="mIs-Qi-8fd"/>
+                <outlet property="imageCollectionView" destination="dSF-rU-1cl" id="hEN-cf-F3z"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="190"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="giftTwo" width="128" height="128"/>
+        <image name="icons" width="160" height="77"/>
+    </resources>
+</document>

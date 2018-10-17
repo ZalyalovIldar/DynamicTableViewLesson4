@@ -23,17 +23,10 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func shareTextButton(_ sender: Any) {
-        // text to share
         let text = "This is some text that I want to share."
         
         // set up activity view controller

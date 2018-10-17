@@ -46,6 +46,7 @@ let uni = ["Казанский Федеральный Универститет",
 let faculties = ["ВМК", "Юрфак","Физфак"]
 let timeInUni = [12, 5, 2, 3]
 let mood = ["Be happy", "smile))))"]
+let asa = ["Trying to add in a background image that's randomly selected from an external array. The random function is working however it's not injecting the value into the background UIImage."," Hello Everyone. Hope you are having a nice day. Today I will show you how to implement simple Pull-to-Refresh in your tableview object.","Лента новостей:Лента новостей состоит из кастомной ячейки с аватором, названием, датой поста, картинкой, текстом над картинкой, и кнопками для лайка, комментария, шаринга с числами соотвественно для каждого (кроме последнего).","Общайтесь с комфортом в любое время суток — стильное тёмное оформление будет оберегать Ваше зрение. Чтобы сменить тему, нажмите на пункт «Внешний вид» в настройках приложения.","PRIVET KAK DELA , DA ETO YA - PUSTAYA NOVOST'"]
 
 func getRandomUser() -> User {
     

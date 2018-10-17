@@ -16,21 +16,28 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var imageInNews: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
-
+    @IBOutlet weak var newsText: UILabel!
     
+    var vc: UIViewController?
+    var model: News!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell(with text:String, vc:TableViewViewController, model:News ) {
+        
+        dateLabel.text = text
+        self.vc = vc
+        self.model = model
+        
+        avatarImage.image = model.avatar
+        nameLabel.text = "\(model.name ?? "") \(model.surname ?? "")"
+        dateLabel.text = model.date
+        imageInNews.image = model.imageInNews
+        likeCountLabel.text = String(model.like)
+        commentCountLabel.text = String(model.comment)
+        newsText.text = model.text
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
     @IBAction func shareTextButton(_ sender: Any) {
         // text to share
         let text = "This is some text that I want to share."
@@ -38,12 +45,11 @@ class TableViewCell: UITableViewCell {
         // set up activity view controller
         let textToShare = [ text ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         
         // exclude some activity types from the list (optional)
         activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
         
         // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
+        vc?.present(activityViewController, animated: true, completion: nil)
     }
 }

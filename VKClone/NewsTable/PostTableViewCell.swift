@@ -24,21 +24,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var viewsCountLabel: UILabel!
     
     var parentViewController: UIViewController!
-    
-    @IBAction func didShareButtonPressed(_ sender: Any) {
-        
-        guard let text = postTextLabel.text else { return }
-        let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])
-
-        if let popoverController = vc.popoverPresentationController {
-
-            popoverController.sourceView = parentViewController.view
-            popoverController.sourceRect = parentViewController.view.bounds
-        }
-
-        parentViewController.present(vc, animated: true, completion: nil)
-    }
-
 
     //MARK: - Configure cell
   
@@ -68,6 +53,21 @@ class PostTableViewCell: UITableViewCell {
         
         groupAvatarImageView.layer.cornerRadius = groupAvatarImageView.frame.width / 2
         groupAvatarImageView.clipsToBounds = true
+    }
+    
+    
+    @IBAction func didShareButtonPressed(_ sender: Any) {
+        
+        guard let text = postTextLabel.text else { return }
+        let vc = UIActivityViewController(activityItems: [text], applicationActivities: [])
+        
+        if let popoverController = vc.popoverPresentationController {
+            
+            popoverController.sourceView = parentViewController.view
+            popoverController.sourceRect = parentViewController.view.bounds
+        }
+        
+        parentViewController.present(vc, animated: true, completion: nil)
     }
 
 }

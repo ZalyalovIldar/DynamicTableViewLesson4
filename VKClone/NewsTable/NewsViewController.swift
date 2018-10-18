@@ -17,6 +17,17 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts: [Post]!
     
+    // MARK: - Refresher
+    
+    /// Add refresher to the table
+    lazy var refreshControl: UIRefreshControl = {
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.gray
+        
+        return refreshControl
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,18 +52,6 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-
-    // MARK: - Refresher
-
-    /// Add refresher to the table
-    lazy var refreshControl: UIRefreshControl = {
-        
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
-        refreshControl.tintColor = UIColor.gray
-        
-        return refreshControl
-    }()
     
     
     /// Reload table data

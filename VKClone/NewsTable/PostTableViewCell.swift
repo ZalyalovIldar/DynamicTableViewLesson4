@@ -38,12 +38,7 @@ class PostTableViewCell: UITableViewCell {
 
         parentViewController.present(vc, animated: true, completion: nil)
     }
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
+
 
     //MARK: - Configure cell
   

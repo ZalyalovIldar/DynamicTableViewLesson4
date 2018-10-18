@@ -8,6 +8,22 @@
 
 import Foundation
 
+// MARK: - User modal
+
+/// - Parameters:
+///   - name: user name
+//    - surname: user surname
+//    - age: user age
+//    - status: user status
+//    - city: where user from
+//    - pageStatus: status of user account
+//    - avatar: user avatar
+//    - phone: user phone
+//    - school: graduated from
+//    - hobbies: user hobbies
+//    - instagramLink: user instagram page
+//    - facebookLink: user facebook page
+//    - vkLink: user vk page
 struct User {
     var name: String
     var surname: String
@@ -24,6 +40,17 @@ struct User {
     let vkLink: String = "www.vk.com"
 }
 
+// MARK: - User modal
+
+/// - Parameters:
+///   - groupName: group title
+//    - groupAvatar: group avatar
+//    - postDate: date of news posting
+//    - postText: news text
+//    - postImageLink: attached image
+//    - likesCount: how many likes
+//    - commentsCount: how many comments
+//    - viewsCount: how many watchers
 struct Post {
     var groupName: String
     var groupAvatar: String

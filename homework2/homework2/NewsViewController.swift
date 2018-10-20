@@ -18,26 +18,30 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var imageInNews: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
+
     
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        avatarImage.image = news.avatar
+        nameLabel.text = "\(news.name ?? "") \(news.surname ?? "")"
+        dateLabel.text = news.date
+        imageInNews.image = news.imageInNews
+        likeCountLabel.text = String(news.like)
+        commentCountLabel.text = String(news.comment)
+        
     }
 
     
     @IBAction func shareTextButton(_ sender: Any) {
-        let text = "This is some text that I want to share."
         
-        // set up activity view controller
+        let text = "This is some text that I want to share."
         let textToShare = [ text ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-        
-        // exclude some activity types from the list (optional)
+        activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
-        
-        // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
 
     }

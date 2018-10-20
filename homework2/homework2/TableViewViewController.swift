@@ -16,18 +16,18 @@ class TableViewViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-    
         tableView.estimatedRowHeight = 300
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         news = getRandomNews()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         
+        news = getRandomNews()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         cell.configureCell(with: news.name, vc: self, model: news)
+        if indexPath.row % 2 == 0 {
+            cell.configureCell(with: news.name, vc: self, model: news)
+        }
         return cell
     }
     
@@ -47,8 +47,9 @@ class TableViewViewController: UIViewController, UITableViewDelegate, UITableVie
     }()
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        news = getRandomNews()
+        
         self.tableView.reloadData()
+        news = getRandomNews()
         refreshControl.endRefreshing()
         
     }

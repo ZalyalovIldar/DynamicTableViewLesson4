@@ -39,17 +39,11 @@ class TableViewCell: UITableViewCell {
 
     
     @IBAction func shareTextButton(_ sender: Any) {
-        // text to share
-        let text = "This is some text that I want to share."
-        
-        // set up activity view controller
+        let text = nameLabel
         let textToShare = [ text ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        
-        // exclude some activity types from the list (optional)
         activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
-        
-        // present the view controller
         vc?.present(activityViewController, animated: true, completion: nil)
     }
+    
 }

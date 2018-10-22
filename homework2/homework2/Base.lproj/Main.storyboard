@@ -155,7 +155,6 @@
                                             <outlet property="likeCountLabel" destination="Y8u-MD-prI" id="YpG-1r-MGe"/>
                                             <outlet property="nameLabel" destination="HSA-Di-Jgg" id="pLa-Y4-cet"/>
                                             <outlet property="newsText" destination="cwA-DI-Llx" id="Hph-JR-UMF"/>
-                                            <segue destination="nuR-qs-aKj" kind="show" identifier="detailSegue" id="1bC-vv-8w6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -177,6 +176,7 @@
                     <navigationItem key="navigationItem" id="hyL-iJ-ztb"/>
                     <connections>
                         <outlet property="tableView" destination="brs-qG-VAY" id="ClN-KX-QlY"/>
+                        <segue destination="nuR-qs-aKj" kind="show" identifier="detailSegue" id="mSj-Pd-99c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZR-oc-I4w" userLabel="First Responder" sceneMemberID="firstResponder"/>

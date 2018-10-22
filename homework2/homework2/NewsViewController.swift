@@ -26,7 +26,7 @@ class NewsViewController: UIViewController {
         
         super.viewDidLoad()
         avatarImage.image = news.avatar
-        nameLabel.text = "\(news.name ?? "") \(news.surname ?? "")"
+        nameLabel.text = "\(news.name ) \(news.surname )"
         dateLabel.text = news.date
         imageInNews.image = news.imageInNews
         likeCountLabel.text = String(news.like)

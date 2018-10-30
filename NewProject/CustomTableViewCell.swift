@@ -23,29 +23,33 @@ class CustomTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
+        
         super.setSelected(selected, animated: animated)
-
     }
     
     // MARK: - Adding content and sharing -
     
-    ///инициализация
-    func addingContent(post:Post, controller:UIViewController){
-        self.textOfPostLabel.text = post.description
-        self.avatarOfGroupImageView.image = post.avatar
-        self.nameOfGroupLabel.text = post.name
-        self.someImageView.image = post.someImage
+    
+    /// инициализация
+    ///
+    /// - Parameters:
+    ///   - post: объект типа Post
+    ///   - controller: контроллер типа UIViewController
+    func addingContent(post:Post, controller:UIViewController) {
+        
+        textOfPostLabel.text = post.description
+        avatarOfGroupImageView.image = post.avatar
+        nameOfGroupLabel.text = post.name
+        someImageView.image = post.someImage
         currentViewController = controller
     }
     
-    ///метод для шаринга с помощью UIActivityViewController
+    
+    /// метод для шаринга с помощью UIActivityViewController
+    ///
+    /// - Parameter sender: any sender
     @IBAction func shareAction(_ sender: Any) {
-        var defaultMessage = "default"
-        if textOfPostLabel.text != nil {
-            defaultMessage = textOfPostLabel.text!
-        }
-        let activityController = UIActivityViewController(activityItems: [defaultMessage], applicationActivities: nil)
-        currentViewController.present(activityController, animated: true, completion: nil)
+        ViewControllerUtils().shareAction(textOfPostLabel: textOfPostLabel, currentViewController: currentViewController)
     }
     
 }

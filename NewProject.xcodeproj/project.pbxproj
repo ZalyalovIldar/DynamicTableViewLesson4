@@ -12,6 +12,7 @@
 		5204E445214FE724002752CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5204E443214FE724002752CC /* Main.storyboard */; };
 		5204E447214FE726002752CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5204E446214FE726002752CC /* Assets.xcassets */; };
 		5204E44A214FE726002752CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5204E448214FE726002752CC /* LaunchScreen.storyboard */; };
+		5229C3BA2186E12B0085DD1B /* File2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229C3B92186E12B0085DD1B /* File2.swift */; };
 		524724F721654532005DD662 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524724F621654532005DD662 /* NewsViewController.swift */; };
 		524724F921654D3C005DD662 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524724F821654D3C005DD662 /* CustomTableViewCell.swift */; };
 		524724FB2165B02B005DD662 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524724FA2165B02B005DD662 /* Post.swift */; };
@@ -27,6 +28,7 @@
 		5204E446214FE726002752CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5204E449214FE726002752CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5204E44B214FE726002752CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5229C3B92186E12B0085DD1B /* File2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File2.swift; sourceTree = "<group>"; };
 		524724F621654532005DD662 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		524724F821654D3C005DD662 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		524724FA2165B02B005DD662 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				5204E443214FE724002752CC /* Main.storyboard */,
 				524724FC2165B8BE005DD662 /* PostDetailViewController.swift */,
 				524724F821654D3C005DD662 /* CustomTableViewCell.swift */,
+				5229C3B92186E12B0085DD1B /* File2.swift */,
 				524724F621654532005DD662 /* NewsViewController.swift */,
 				524724FA2165B02B005DD662 /* Post.swift */,
 				5204E446214FE726002752CC /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				524724FD2165B8BE005DD662 /* PostDetailViewController.swift in Sources */,
 				524724F921654D3C005DD662 /* CustomTableViewCell.swift in Sources */,
 				5204E442214FE724002752CC /* ViewController.swift in Sources */,
+				5229C3BA2186E12B0085DD1B /* File2.swift in Sources */,
 				524724FB2165B02B005DD662 /* Post.swift in Sources */,
 				5204E440214FE724002752CC /* AppDelegate.swift in Sources */,
 				524724F721654532005DD662 /* NewsViewController.swift in Sources */,

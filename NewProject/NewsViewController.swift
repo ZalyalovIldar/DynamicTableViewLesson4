@@ -14,10 +14,15 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var somePostArray:[Post] = []
     var refreshControl:UIRefreshControl?
+    var identifier1 = "cell"
+    var segueIdentifier = "postDetailIdentifier"
     
     // MARK: - Методы -
     
-    ///метод создающий Array, в который добавляются данные, и который потом присвоится нашему основному somePostArray
+    
+    /// метод создающий Array, в который добавляются данные, и который потом присвоится нашему основному somePostArray
+    ///
+    /// - Returns: array, который потом присвоится основному
     func createNewPostArray() -> [Post] {
         var currentArray:[Post] = []
         
@@ -33,6 +38,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         somePostArray = createNewPostArray()
         tableView.estimatedRowHeight = 400
@@ -43,51 +49,36 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         refreshControl.addTarget(self, action:  #selector(reloading), for: UIControlEvents.valueChanged)
     }
     
-    ///обновление данных
+    
+    /// обновление данных
     @objc func reloading() {
+        
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     // MARK: - funcs of TableView -
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return somePostArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomTableViewCell
-        cell.addingContent(post: somePostArray[indexPath.row], controller: self)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier1) as! CustomTableViewCell
+        
+        cell.addingContent(post: (self.somePostArray[indexPath.row]), controller: self)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let postDetailVC = mainStoryboard.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
-        //передача данных в PostDetailViewController
-        postDetailVC.mainViewController = self
-        postDetailVC.selectedIndex = indexPath.row
-        ///переход в детальное окно
-        self.show(postDetailVC, sender: nil)
-    }
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == segueIdentifier {
+            if let nextVC = segue.destination as? PostDetailViewController {
+                nextVC.mainViewController = self
+                nextVC.selectedIndex = tableView.indexPathForSelectedRow?.row
+            }
+        }
     }
-    */
-
 }

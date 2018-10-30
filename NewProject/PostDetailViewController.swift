@@ -24,39 +24,25 @@ class PostDetailViewController: UIViewController {
         super.viewDidLoad()
         filling()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: - Adding content and sharing -
     
-    ///заполнение данных из основного контроллера в новое окно детальной информации.
+    /// заполнение данных из основного контроллера в новое окно детальной информации.
     func filling() {
-        self.avatarImageView.image = mainViewController.somePostArray[selectedIndex].avatar
-        self.nameOfGroupLabel.text = mainViewController.somePostArray[selectedIndex].name
-        self.textOfPostLabel.text = mainViewController.somePostArray[selectedIndex].description
-        self.contentImageView.image = mainViewController.somePostArray[selectedIndex].someImage
+        
+        avatarImageView.image = mainViewController.somePostArray[selectedIndex].avatar
+        nameOfGroupLabel.text = mainViewController.somePostArray[selectedIndex].name
+        textOfPostLabel.text = mainViewController.somePostArray[selectedIndex].description
+        contentImageView.image = mainViewController.somePostArray[selectedIndex].someImage
     }
 
-    ///метод для шаринга с помощью UIActivityViewController
+    
+    /// метод для шаринга с помощью UIActivityViewController
+    ///
+    /// - Parameter sender: any sender
     @IBAction func sharingAction(_ sender: Any) {
         
-        var defaultMessage = "default"
-        if textOfPostLabel.text != nil {
-            defaultMessage = textOfPostLabel.text!
-        }
-        let activityController = UIActivityViewController(activityItems: [defaultMessage], applicationActivities: nil)
-        mainViewController.present(activityController, animated: true, completion: nil)
+        ViewControllerUtils().shareAction(textOfPostLabel: textOfPostLabel, currentViewController: mainViewController)
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

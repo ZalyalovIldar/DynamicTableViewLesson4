@@ -9,20 +9,14 @@
 import Foundation
 import UIKit
 
-class Post {
+struct Post {
     
+    /// название группы
     var name:String
+    /// аватар группы
     var avatar:UIImage
+    /// описание поста
     var description:String?
+    /// изображение, прикрепленное к посту
     var someImage:UIImage?
-    
-    // MARK: - Инициализация -
-    
-    ///инициализация
-    init(name:String, avatar:UIImage, description:String?, someImage:UIImage?) {
-        self.name = name
-        self.avatar = avatar
-        self.description = description
-        self.someImage = someImage
-    }
 }

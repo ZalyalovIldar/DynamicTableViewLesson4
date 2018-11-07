@@ -8,20 +8,19 @@
 
 import UIKit
 
-class InfoPostViewController: UIViewController {
 
-    
-    
+
+class InfoPostViewController: UIViewController {
 
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var image: UIImageView!
-    var model: Post!
+    var test1: Post?
+    var s = DataManager ()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        image.image = model.post
-        text.text = model.name
-        
+       
+        text.text = test1?.name
+        image.image = test1?.post
     }
     
 

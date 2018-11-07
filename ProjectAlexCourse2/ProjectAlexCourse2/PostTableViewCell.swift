@@ -12,10 +12,10 @@ protocol CustomCellDelegate: class {
     func didpressbutton()
     func share()
 }
-
+var model1: Post!
 class PostTableViewCell: UITableViewCell {
     
-    // MARK: переменные
+    // MARK: - Переменные
     @IBOutlet weak var postAvatar: UIImageView!
     @IBOutlet weak var postMainPhoto: UIImageView!
     @IBOutlet weak var postName: UILabel!
@@ -28,30 +28,41 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postShareCount: UILabel!
     
     
-    // MARK: действия кнопок
-    /// метод поставить и убрать лайк
+    // MARK: - Действия кнопок
     
-    @IBAction func likedPressed(_ sender: Any) {
-        if postLikeCount.text == String(0){
-            postLikeCount.text = String(1)}
-        else {
+    
+    /// метод поставить и убрать лайк
+     @IBAction func likedPressed(_ sender: Any) {
+        if postLikeCount.text == String(0) {
+            postLikeCount.text = String(1)
+        } else {
             postLikeCount.text = String(0)
         }
 }
   
-    
-    /// метод зашерить инфу
-    
-    @IBAction func sharePressed() {
-      delegate?.share()
-    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        print("True")
     }
+    
+    // метод зашерить инфу
+   @IBAction func sharePressed(_ sender: Any) {
+       delegate?.share()
+    
+    
+   }
+   
     @IBAction func postOpenButton(_ sender: Any) {
         delegate?.didpressbutton()
     }
     weak var delegate: CustomCellDelegate?
-   // MARK:  настройка ячейки
+   
+    // MARK: - настройка ячейки
+    
+    
+    
     func configurecell(with avaimage: UIImage, name: String, time: String, mainPhoto: UIImage, likeimage: UIImage, commentImage: UIImage, shareimage: UIImage, likeCount: Int, commentCount: Int, shareCount: Int, delegate: CustomCellDelegate){
+        
         postAvatar.image = avaimage
         postMainPhoto.image = mainPhoto
         postName.text = name
@@ -65,5 +76,6 @@ class PostTableViewCell: UITableViewCell {
         self.delegate = delegate
         
     }
-
+   
+        
 }
